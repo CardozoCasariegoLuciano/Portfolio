@@ -1,0 +1,29 @@
+@import url("./variables.css");
+
+
+.image{
+  height: 200px;
+  border-radius: 100%;
+  background-color: red;
+}
+
+.home{
+  text-align: center;
+}
+
+.my_name{
+  margin-top: 15px;
+}
+
+.my_description{
+  margin-top: 5px;
+}
+
+.contactSection a{
+  text-decoration: none;
+}
+
+.contactSection_icons{
+  margin: 20px 10px 0px 10px;
+  width: 30px;
+}
