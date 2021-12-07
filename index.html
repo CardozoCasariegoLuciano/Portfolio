@@ -15,12 +15,24 @@
   </head>
   <body>
     <header class="main_header">
-      <img class="header_icon" id="header-icon" src="./assets/menu.png" alt="menu" />
+      <h2 class="logo">
+        <span class="letter_L">L</span> <span class="letter_C">CC</span>
+      </h2>
+      <img
+        class="header_icon"
+        id="header-icon"
+        src="./assets/icons/menu.png"
+        alt="menu"
+      />
       <ul id="menu" class="hideMenu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#aboutMe">About me</a></li>
-        <li><a href="#skills">My skills</a></li>
-        <li><a href="#projects">My projects</a></li>
+        <!--<li><p id="homeBTN">Home</p></li>-->
+        <!--<li><a href="#aboutMe" id="AboutMeBTN">About me</a></li>-->
+        <!--<li><a href="#skills" id="skillsBTN" >My skills</a></li>-->
+        <!--<li><a href="#projects" id="projectsBTN" >My projects</a></li>-->
+        <li><a href="#home" id="homeBTN">Home</a></li>
+        <li><a href="#aboutMe" id="AboutMeBTN">About me</a></li>
+        <li><a href="#skills" id="skillsBTN" >My skills</a></li>
+        <li><a href="#projects" id="projectsBTN" >My projects</a></li>
       </ul>
     </header>
 
@@ -30,47 +42,124 @@
           <div class="image"></div>
           <!--replace with an image -->
         </picture>
-        <h1 class="my_name">
+        <h1 class="my_name" >
           Luciano <br />
           Cardozo Casariego
         </h1>
         <p class="my_description">Full stack developer</p>
 
         <div class="contactSection">
-          <a href="https://www.linkedin.com/in/luciano-cardozo-casariego/" target="_blank" title="go to linkedIn">
-            <img class="contactSection_icons" src="./assets/linkedin.png" alt="link to linkedIn">
+          <a
+            href="https://www.linkedin.com/in/luciano-cardozo-casariego/"
+            target="_blank"
+            title="go to linkedIn"
+          >
+            <img
+              class="contactSection_icons"
+              src="./assets/icons/linkedin.png"
+              alt="link to linkedIn"
+            />
           </a>
-          <a href="https://github.com/CardozoCasariegoLuciano" target="_blank" title="go to gitHub">
-            <img class="contactSection_icons" src="./assets/github.png" alt="link to gitHub">
+          <a
+            href="https://github.com/CardozoCasariegoLuciano"
+            target="_blank"
+            title="go to gitHub"
+          >
+            <img
+              class="contactSection_icons"
+              src="./assets/icons/github.png"
+              alt="link to gitHub"
+            />
           </a>
-          <a href="./assets/Luciano_Cardozo_Casariego-en.pdf" download="Luciano_Cardozo_Casariego-en" title="Download resume">
-            <img  class="contactSection_icons" src="./assets/cv.png" alt="download resume">
+          <a
+            href="./assets/MyCVs/Luciano_Cardozo_Casariego-en.pdf"
+            download="Luciano_Cardozo_Casariego-en"
+            title="Download resume"
+            class="downloadCV"
+          >
+            Download CV
           </a>
         </div>
       </section>
 
-      <section class="aboutMe" id="aboutMe">
-        <h3 aboutMe_title>About me</h3>
-       
+      <section class="aboutMe" >
+        <h3 class="aboutMe_title" id="aboutMe">About me</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex beatae
+          fugiat voluptatibus esse praesentium deleniti omnis id ipsa ipsam
+          sapiente nihil eius aperiam quam error eos, consectetur quaerat
+          distinctio soluta perferendis repellendus in, totam nostrum recusandae
+          alias. Corrupti totam ipsa temporibus esse voluptas deleniti
+          consequuntur iste saepe, incidunt impedit aliquid!
+        </p>
       </section>
 
+      <section class="skills" >
+        <h3 class="skills_title" id="skills">Skills</h3>
+        <p>Technologies which I enjoy work with</p>
 
-      <section class="skills" id="skills">
-        <h3 aboutMe_title>My Skills</h3>
-       
+        <div class="skills_grid">
+          <img class="skills_icon" src="./assets/icons/html.png" alt="html" />
+          <img class="skills_icon" src="./assets/icons/css.png" alt="css" />
+          <img
+            class="skills_icon"
+            src="./assets/icons/javascript.png"
+            alt="JavaScript"
+          />
+          <img class="skills_icon" src="./assets/icons/react.png" alt="React" />
+          <img class="skills_icon" src="./assets/icons/nodejs.png" alt="Node" />
+          <img class="skills_icon" src="./assets/icons/git.png" alt="Git" />
+          <img class="skills_icon" src="./assets/icons/sass.png" alt="Sass" />
+          <img class="skills_icon" src="./assets/icons/mongodb.png" alt="MongoDb" />
+          <img class="skills_icon" src="./assets/icons/mysql.png" alt="MySQL" />
+          <img
+            class="skills_icon"
+            src="./assets/icons/typescript.png"
+            alt="TypeScript"
+          />
+          <img class="skills_icon" src="./assets/icons/redux.png" alt="Redux" />
+          <img class="skills_icon" src="./assets/icons/jest.png" alt="Jest" />
+        </div>
       </section>
 
-
-      <section class="projects" id="projects">
-        <h3 aboutMe_title>My projects</h3>
-       
+      <section class="projects" >
+        <h3 class="projects_title" id="projects">My projects</h3>
+        <div id="project_root"></div>
       </section>
     </main>
 
     <footer>
-      footer content
+      <div class="footer_content">
+        <div class="contactSection">
+          <a
+            href="https://www.linkedin.com/in/luciano-cardozo-casariego/"
+            target="_blank"
+            title="go to linkedIn"
+            >
+            <img
+              class="contactSection_icons"
+              src="./assets/icons/linkedin.png"
+              alt="link to linkedIn"
+              />
+          </a>
+          <a
+            href="https://github.com/CardozoCasariegoLuciano"
+            target="_blank"
+            title="go to gitHub"
+            >
+            <img
+              class="contactSection_icons"
+              src="./assets/icons/github.png"
+              alt="link to gitHub"
+              />
+          </a>
+        </div>
+        <p>lucianocardozocasariego@gmail.com</p>
+      </div>
     </footer>
 
+    <script src="./javaScript/projects.js"></script>
     <script src="./javaScript/main.js"></script>
   </body>
 </html>

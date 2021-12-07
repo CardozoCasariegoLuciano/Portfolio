@@ -1,14 +1,27 @@
-
 .main_header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   height: var(--header-height);
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--header-bg-color);
-  position: sticky;
+  position: fixed;
   top: 0;
+}
+
+.logo {
+  margin-left: 30px;
+  font-size: 1.8rem;
+  font-family: "Itim", cursive;
+}
+
+.letter_L {
+  color: darkblue;
+  letter-spacing: -5px;
+}
+.letter_C {
+  color: #333;
 }
 
 .main_header .header_icon {
@@ -19,7 +32,7 @@
 .main_header ul {
   list-style: none;
   position: absolute;
-  left:0%;
+  left: 0%;
   top: var(--header-height);
   background-color: var(--header-bg-color);
   transition: transform 0.3s;
@@ -32,11 +45,11 @@
   font-weight: bold;
 }
 
-.main_header li a{
+.main_header li a {
   color: #333;
   text-decoration: none;
 }
 
-.hideMenu{
+.hideMenu {
   transform: translateX(-100%);
 }

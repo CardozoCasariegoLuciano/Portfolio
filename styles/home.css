@@ -1,29 +1,49 @@
 @import url("./variables.css");
 
-
-.image{
+.image {
   height: 200px;
   border-radius: 100%;
   background-color: red;
 }
 
-.home{
+.home {
   text-align: center;
+  margin-top: 55px;
+  margin-bottom: var(--sections-separation);
 }
 
-.my_name{
+.home:target {
+  margin-top: 0px;
+}
+
+.my_name {
   margin-top: 15px;
 }
 
-.my_description{
+.my_description {
   margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-.contactSection a{
+.contactSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactSection a {
   text-decoration: none;
 }
 
-.contactSection_icons{
-  margin: 20px 10px 0px 10px;
+.contactSection_icons {
   width: 30px;
+  margin-top: 2px;
+}
+
+.downloadCV {
+  color: #333;
+  background-color: var(--header-bg-color);
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: bold;
 }
