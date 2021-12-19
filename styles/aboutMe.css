@@ -1,12 +1,14 @@
 .aboutMe {
   text-align: center;
   width: 70%;
+  margin-top: 250px;
 }
 
-.aboutMe_title{
+.aboutMe_title {
   margin-bottom: 20px;
 }
 
 .aboutMe p {
-  line-height: 25px;
+  line-height: 30px;
+  margin: 10px 0px;
 }

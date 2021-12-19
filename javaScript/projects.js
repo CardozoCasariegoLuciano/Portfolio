@@ -10,6 +10,14 @@ const REDUX= "REDUX"
 const TS = "TS"
 
 const projectsList = [
+  {
+    image: "./assets/captures/Weather.png",
+    title: "Weather app",
+    description: "A simple app created using vanilla technologies <br/><br/> API: Open-weather",
+    github: "https://github.com/CardozoCasariegoLuciano/Open-weather",
+    url: "http://lucianocardozocasariego.com.ar/weather/",
+    techs: [HTML, CSS, JS]
+  },
 ];
 
 const generateIcons = (techs) => {
@@ -17,34 +25,34 @@ const generateIcons = (techs) => {
   techs.forEach((tech) => {
     switch (tech) {
       case 'REACT':
-        return icons+=`<img class="card_techUsed card_react_icon" src="../assets/icons/react.png" alt="react icon"/>`
+        return icons+=`<img class="card_techUsed card_react_icon" src="./assets/icons/react.png" alt="react icon"/>`
 
       case 'HTML':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/html.png" alt="html icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/html.png" alt="html icon"/>`
 
       case 'CSS':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/css.png" alt="css icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/css.png" alt="css icon"/>`
 
       case 'JS':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/javascript.png" alt="JavaScript icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/javascript.png" alt="JavaScript icon"/>`
 
       case 'MONGODB':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/mongodb.png" alt="MongoDB icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/mongodb.png" alt="MongoDB icon"/>`
 
       case 'MYSQL':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/mysql.png" alt="MySQL icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/mysql.png" alt="MySQL icon"/>`
 
       case 'NODE':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/nodejs.png" alt="Node icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/nodejs.png" alt="Node icon"/>`
 
       case 'JEST':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/jest.png" alt="Jest icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/jest.png" alt="Jest icon"/>`
 
       case 'REDUX':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/redux.png" alt="Redux icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/redux.png" alt="Redux icon"/>`
 
       case 'TS':
-        return icons+=`<img class="card_techUsed" src="../assets/icons/typescript.png" alt="TypeScript icon"/>`
+        return icons+=`<img class="card_techUsed" src="./assets/icons/typescript.png" alt="TypeScript icon"/>`
       
       default:
         return ``
@@ -67,10 +75,10 @@ projectsList.forEach((prj) => {
               `</div>` +
               `<div class="card_linksSections">` +
                 `<a class="card_github" href=${prj.github} target="_blank">` + 
-                    `<img src="../assets/icons/github.png" alt="view code on github"/>` +
+                    `<img src="./assets/icons/github.png" alt="view code on github"/>` +
                 `</a>` +
                 `<a class="card_view" href=${prj.url} target="_blank">` +
-                      `<img src="../assets/icons/eye.png" alt="view project">` + 
+                      `<img src="./assets/icons/eye.png" alt="view project">` + 
                 `</a>` +
               `</div>` +
             `</div>` +

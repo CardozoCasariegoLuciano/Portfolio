@@ -1,12 +1,10 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");*/
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Ubuntu:wght@300&display=swap");
 @import url("./variables.css");
 @import url("./header.css");
 @import url("./home.css");
 @import url("./aboutMe.css");
 @import url("./skills.css");
 @import url("./projects.css");
-
 
 * {
   margin: 0px;
@@ -18,10 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
-:target::before{
-  content: '';
+:target::before {
+  content: "";
   display: block;
-  height:calc(90px + var(--header-height));
+  height: calc(60px + var(--header-height));
 }
 
 body {
@@ -32,32 +30,30 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 50px;
 }
 
-
-footer{
-background-color: rgba(0, 0, 0, 0.5);
-padding: 10px 0px;
-margin-top: 40px;
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0px;
+  margin-top: 40px;
 }
 
-.footer_content{
-  display:flex;
+.footer_content {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-footer img{
+footer img {
   background-color: white;
   border-radius: 7px;
   margin: 0px 10px;
 }
 
-footer p{
+footer p {
   color: white;
   text-align: center;
   padding-bottom: 5px;

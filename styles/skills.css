@@ -1,7 +1,8 @@
 .skills {
-  margin-top: var(--sections-separation);
+  /*margin-bottom: var(--sections-separation);*/
   text-align: center;
   width: 70%;
+  margin-top: 250px;
 }
 
 .skills_title {

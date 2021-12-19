@@ -1,19 +1,25 @@
 @import url("./variables.css");
 
-.image {
-  height: 200px;
-  border-radius: 100%;
-  background-color: red;
-}
-
 .home {
   text-align: center;
-  margin-top: 55px;
-  margin-bottom: var(--sections-separation);
+  margin-top: 150px;
 }
 
 .home:target {
-  margin-top: 0px;
+  margin-top: -50px;
+}
+
+.home:target::before {
+  content: "";
+  display: block;
+  height: calc(150px + var(--header-height));
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
 .my_name {
