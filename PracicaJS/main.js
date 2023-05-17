@@ -1,149 +1,73 @@
-/*
-JS basico
-    -Tipo de datos
-      Cadenas de texto(strings):
-                          "Holaa"
-                          'Holaa'
-                          `Holaa` => permite evaluar operaciones usando ${...}.
-                                      Ejemplo: `tengo ${10 + 4} años` = "tengo 14 años"
+// Que es el DOM?
+// El DOM (Document Object Model) es una representación jerárquica y estructurada de un documento HTML
+// y todas sus etiquetas
+// Imagen de referencia  https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Schaubilder/representacion-grafica-de-un-dom-tree.png
 
-      Numeros(number)
-                  0, 12, 12435, 1123.233
+// Ejemplo de manipulación del DOM
+const listaDeNombres = ["Rogelio", "Eduardo", "Rodolfo"]; //Creo una lista de nombres
 
-      True/False(boolean)
-                  True - False
-
-      Null:
-          Representa la ausencia intencional de cualquier objeto o valor.
-          Es un valor único que indica la falta de valor.
-
-      Undefined:
-        Representa una variable que ha sido declarada pero no
-        ha sido asignada con ningún valor. Si una variable no
-        se ha inicializado, su valor es undefined.
-
-
-    -Variables
-        una variable es un contenedor que se utiliza para almacenar valores.
-
-        se utiliza las palabras clave let o const, seguida del nombre que
-        le quieres dar a la variable. Por ejemplo:
-
-        let apellido = camello
-        const PI = 3.14
-
-        Con el "=" se le asigna un valor a las variables
-        a las constantes (const) no se les puede cambiar el valor
-
-
-    -Operadores
-        Operadores de strings:
-          +  cuando hablamos de cadenas de texto el operador "+" se usa para concatenarlas.
-              por ejemplo:  "Hola" + " " + "chau" === "Hola chau"
-
-        Operadores de numberos
-          +  Cuando se trata de numeros, los suma, EJ 5 + 5 === 10
-          *  Multiplica los numeros EJ  5 * 5 === 25
-          -  Resta los numeros EJ   5 - -5 === 0
-          /  Divicion entre los numeros  10 / 2 === 5
-          ** Elevar a la potencia 3 ** 3 === 27
-          %  Modulo entre los numeros  12 % 2 === 0
-
-        Operadores de booleanos
-          ==  Igual en valor           5 == "5" --> true
-          === Igual en valor y tipo    5 === "5" --> false
-          <   menor que                4 < 12 --> true
-          <=  menor o igual que        7 <= 20 --> true
-          >   mayor                    4 > 4 --> false
-          >=  mayor o igual que        3 >= 6 --> false
-          !   negacion                 !true --> false
-
-
-    -Controles de flujo
-       IF
-        estructura:
-          if ([Condicion]) {
-            [Codigo a ejecutar si condición es true]
-          }
-
-       IF-ELSE
-        estructura:
-          if ([Condicion]) {
-            [Codigo a ejecutar si condición es true]
-          } else {
-            [Codigo a ejecutar si condición es false]
-          }
-
-       SWITCH
-        estructura:
-            switch ([Evaluar]) {
-              case [Machea evaluacion]:
-               [Contenido a ejecutar]
-                break;
-
-              case [Machea evaluacion]:
-               [Contenido a ejecutar]
-                break;
-
-              default:
-               [Contenido a ejecutar si no matchea nada]
-                break;
-            }
-
-            ejemplo
-
-
-    -Loops
-      WHILE
-        while (condición) {
-          Bloque de código a repetir
-          Se ejecuta siempre que la condición sea verdadera
-          NOTA: si la condición nunca cambia a false se crea un loop infinito
-        }
-
-      FOR
-        for (inicialización; condición; actualización) {
-          // Bloque de código a repetir
-        }
-
-        ejemplo
-          for (let i = 0; i < 5; i++) {
-            valor = valor + i
-          }
-
-    -Funciones
-        las funciones son bloques de código que pueden recibir valores de entrada
-        (parámetros), realizar operaciones y devolver un resultado (valor de retorno).
-        Las funciones se utilizan para agrupar lógica relacionada y reutilizable en un programa.
-
-      Ejemplo
-        function nombreFuncion(parametro1, parametro2, ...) {
-          // Cuerpo de la función
-          // Instrucciones a ejecutar
-          // Puede incluir declaraciones de variables, bucles, condicionales, etc.
-          // tiene a disposición los valores pasados por parametro
-          return resultado; // Opcional: devuelve un valor
-        }
-*/
-
-const listaDeNombres = ["Rogelio", "Eduardo", "Rodolfo"];
-
+//selecciono los elementos del HTML que voy a usar, por su atributo id (ver el index.html)
 const nombre = document.getElementById("nombre");
 const btn_nombre = document.getElementById("btn_nombre");
 const btn_color = document.getElementById("btn_color");
 
+
 let nombreActual = 0;
-nombre.innerHTML = `${listaDeNombres[nombreActual]}`;
+nombre.innerHTML = `${listaDeNombres[nombreActual]}`; //a la etiqueta con id nombre (que es un span) le agrego un HTML a su interior
+                                                      //en este caso es el elemento de la lista "listaDeNombres" que este en la
+                                                      // posición "nombreActual" que en este punto es 0 (por la linea anterior)
 
-
-btn_nombre.addEventListener("click", function () {
-  nombreActual++
-  if (nombreActual >= listaDeNombres.length) {
-    nombreActual = 0
+// agrego un eventListener del tipo "click" a la etiqueta con id btn_nombre
+// el tipo click de eventListener se ejecuta cada vez que el usuario hace click
+// en el elemento html
+btn_nombre.addEventListener("click", function () { //Esta funcion lo unico que hace es recorrer la listaDeNombres y muestra el proximo nombre
+    nombreActual++;                                // Si llega al final vuelve desde el principio (por la logica del IF)
+    if (nombreActual >= listaDeNombres.length) {
+    nombreActual = 0;
   }
   nombre.innerHTML = `${listaDeNombres[nombreActual]}`;
 });
 
-btn_color.addEventListener("click", function(){
-  nombre.classList.toggle("color")
-})
+//Mismo eventListener pero para la etiqueta con id btn_color
+btn_color.addEventListener("click", function () {
+  nombre.classList.toggle("color"); //quita o pone la clase css "color" dependiendo si ya la tenia o no (ver en stypes.css para ver esa clase)
+});
+
+//TAREA 1:
+// Agregar otra lista con apellidos
+// Agregar otro botton que al hacerle click cambie el apellido (mismo funcionamiento que con los nombres)
+// El boton de color tiene que modificar tanto al nombre como al apellido
+
+//se espera poder probar las distintas combinaciones de nombres y apellidos
+
+
+
+//Contador
+const label_valor = document.getElementById("valor");
+
+let valor = 0;
+label_valor.innerHTML = valor;
+
+// en estos casos se usan otro tipo de eventListener
+// solo creo las funciones que se van a ejecutar, y en el HTML en la etiqueta que me
+// interese le agrego el atributo onclick="miFuncion()" para que se ejecute al hacerle click
+function sumar() {
+  valor++;
+  label_valor.innerHTML = valor;
+}
+
+function restar() {
+  valor--;
+  label_valor.innerHTML = valor;
+}
+//hay muchos tipos de eventos, todos los que se te ocurran (googlealos)
+
+
+//TAREA 1:
+// limitar el contador para que solo baje hasta 0 y que solo suba hasta 15
+
+//TAREA 2:
+// Hacer que el contador aumente de 5 en 5 y decremente de 3 en 3 USANDO PARAMETROS
+
+
+
